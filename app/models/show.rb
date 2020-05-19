@@ -4,6 +4,6 @@ class Show < ActiveRecord::Base
 
 
   def actors_list
-    puts
+    puts ''
   end
 end
