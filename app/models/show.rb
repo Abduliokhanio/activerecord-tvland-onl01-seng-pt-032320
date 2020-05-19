@@ -6,4 +6,7 @@ class Show < ActiveRecord::Base
 
   end
 
+  def length
+  end
+
 end
