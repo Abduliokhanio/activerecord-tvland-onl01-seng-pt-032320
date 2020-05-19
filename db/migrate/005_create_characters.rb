@@ -1,2 +1,6 @@
 class CreateCharacters < ActiveRecord::Migration
-end 
+  def change
+    create_table :characters do |t|
+    end
+  end
+end
