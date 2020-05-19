@@ -10,6 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 5) do
+
+  create_table "actors", force: :cascade do |t|
+    t.text "first_name"
+    t.text "last_name"
+  end
+
+  create_table "characters", force: :cascade do |t|
+    t.text "name"
+    t.text "catchphrase"
+    t.integer "actor_id"
+    t.integer "show_id"
+    t.index ["actor_id"], name: "index_characters_on_actor_id"
+    t.index ["show_id"], name: "index_characters_on_show_id"
+  end
+
+  create_table "networks", force: :cascade do |t|
+    t.string "call_letters"
+    t.integer "channel"
+  end
+
+  create_table "shows", force: :cascade do |t|
+    t.string "name"
+    t.string "day"
+    t.string "season"
+    t.string "genre"
+    t.integer "network_id"
+  end
 
 end
