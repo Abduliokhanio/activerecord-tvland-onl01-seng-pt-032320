@@ -1,2 +1,2 @@
-class CreateCharacters < ActiveRecord::Migration 
+class CreateCharacters < ActiveRecord::Migration
 end 
